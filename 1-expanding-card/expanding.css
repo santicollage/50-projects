@@ -1,0 +1,95 @@
+/* General Configuration */
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+  background-color: var(--one);
+}
+
+/* Main Containers */
+body{
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90vw;
+  height: 90vh;
+}
+
+.box-contain {
+  display: flex;
+  width: 48%;
+  height: 98%;
+  justify-content: space-between;
+}
+.vertical-contain {
+  flex-direction: column;
+}
+
+.box {
+  display: flex;
+  position: relative;
+  border-radius: 30px;
+  margin: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: end;
+  cursor: pointer;
+  flex: 0.2;
+  transition: all 1.5s ease-in;
+}
+.box-active {
+  flex: 1;
+}
+
+.box h2 {
+  position: absolute;
+  font-size: 2rem;
+  bottom: 10px;
+  left: 10px;
+  color:  var(--four);
+  opacity: 0;
+  transition: all 1.5s ease-in;
+}
+
+.box-active h2 {
+  opacity: 1;
+}
+
+@media (460px <= width <= 800px ) {
+  .vertical-contain {
+    display: none;
+  }
+  .horizontal-contain {
+    width: 98%;  
+  }
+}
+
+@media (max-width: 460px ) {
+  .vertical-contain {
+    width: 98%;
+  }
+  .horizontal-contain {
+    display: none;  
+  }
+}
