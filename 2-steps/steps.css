@@ -1,0 +1,112 @@
+/* General Configuration */
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: aquamarine; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+  background-color: var(--one);
+}
+
+/* Main Containers */
+body{
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #76ABAE; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 350px;
+  height: 150px;
+}
+
+/* Loading line */
+.top-contain {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  align-self: center;
+}
+.top-contain .loading {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 3px;
+  background-color: var(--three);
+  z-index: -1;
+}
+.top-contain .complete {
+  width: 0;
+  background-color: var(--eight);
+  transition: all 0.5s ease-in;
+}
+
+/* Circles */
+.circle {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--six);
+  border-radius: 50%;
+  border: solid 4px var(--three);
+  background-color: var(--one);
+  font-size: 2rem;
+  transition: all 0.5s ease-in;
+}
+.circle-active {
+  border: solid 5px var(--eight);
+  border-radius: 30%;
+}
+
+/* Button */
+.bottom-contain {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+.bottom-contain .btn {
+  width: 80px;
+  height: 40px;
+  margin: 10px;
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--eight);
+  font-family: "Ramabhadra", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--one);
+  cursor: pointer;
+}
+.bottom-contain .btn:active {
+  transform: scale(0.9);
+}
+.bottom-contain .btn:disabled {
+  background-color: var(--three);
+  color: var(--six);
+  cursor: not-allowed;
+}
