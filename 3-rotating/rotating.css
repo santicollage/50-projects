@@ -1,0 +1,148 @@
+/* General Configuration */
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: aquamarine; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+  background-color: var(--seven);
+}
+body {
+  position: absolute;
+}
+
+/* CIRCLE */
+header {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: var(--four);
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s ease-in-out;
+}
+.header-rotate {
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+header button{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 60px;
+  right: 60px;
+  border: none;
+  background: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+header .icon-open {
+  background-image: url(./icons/menu-hamburguesa.svg);
+}
+header .icon-close {
+  background-image: url(./icons/cruz.svg);
+  left: 60px;
+}
+
+/* NAV */
+nav {
+  position: absolute;
+  z-index: -1;
+  top: 65vh;
+  left: 15px;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+nav ul a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: var(--three);
+}
+nav div {
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+}
+nav .disabled {
+  transform: translateX(-145px);
+}
+nav .li-home {
+  transition: all 1s ease-in-out;  
+}
+nav .li-about {
+  transition: all 1.2s ease-in-out;
+}
+nav .li-contact {
+  transition: all 1.4s ease-in-out;
+}
+nav .li-home div {
+background-image: url(./icons/hogar.svg);
+}
+nav .li-about div {
+  background-image: url(./icons/usuario.svg);
+}
+nav .li-contact div {
+  background-image: url(./icons/sobre.svg);
+}
+
+
+/* MAIN */
+main {
+  display: flex;
+  z-index: 2;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 70px;
+  background-color: var(--one);
+  transform-origin: 0 0;
+  transition: all 1s ease-in-out;
+}
+.main-rotate {
+  transform: rotate(-17deg);
+}
+main h1 {
+  font-size: 3.5rem;
+  color: var(--eight);
+  margin-bottom: 20px;
+  text-align: center;
+}
+main p {
+  font-size: 1.6rem;
+  color: var(--six);
+  text-align: center;
+  margin-bottom: 20px;
+}
+main h3 {
+  font-size: 2rem;
+  color: var(--six);
+  margin-bottom: 10px;
+}
+main img {
+  width: 60vw;
+  border-radius: 5px;
+}
