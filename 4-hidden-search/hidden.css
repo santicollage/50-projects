@@ -1,0 +1,88 @@
+/* General Configuration */
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body{
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(ellipse at center, rgba(26,43,44,1) 0%, rgba(19,40,41,1) 21%, rgba(11,44,46,1) 62%, rgba(10,39,41,1) 100%);
+}
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(26,43,44,1) 0%, rgba(19,40,41,1) 21%, rgba(11,44,46,1) 62%, rgba(4,63,66,1) 100%);
+  transition: all 1.5s ease-in-out;
+  opacity: 0;
+}
+.active {
+  opacity: 100%;
+}
+
+/* SEARCH BAR */
+main {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 15px 15px;
+  border-radius: 40px;
+  background-color: var(--four);
+  /* border: 5px solid var(--three); */
+}
+main:hover {
+  background-color: var(--five);
+}
+main input {
+  width: 300px;
+  height: 30px;
+  padding: 0 15px;
+  border: none;
+  font-size: 2rem;
+  font-family: "Ramabhadra", sans-serif;
+  background: none;
+  color: var(--two);
+  transition: width 1s ease-in-out;
+}
+main .disabled {
+  width: 0px;
+}
+main input::placeholder{
+  color: var(--three);
+}
+main input:focus{
+  outline: none;
+}
+main button {
+  position: absolute;
+  top: 8px;
+  right: 11px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  background-image: url(./icons/busqueda.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
