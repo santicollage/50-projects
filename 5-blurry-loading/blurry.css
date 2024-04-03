@@ -1,0 +1,47 @@
+/* General Configuration */
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BACKGROUND */
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/time.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  z-index: -1;
+}
+
+/* LOADING */
+body .loading {
+  font-size: 5rem;
+  color: var(--five);
+}
+
