@@ -1,0 +1,101 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+/* SECTIONS */
+.container {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: brightness(80%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+}
+.container-left {
+  background-image: url(./img/dog.jpg);
+}
+.container-right {
+  background-image: url(./img/cat.jpg);
+}
+
+/* HOVER */
+.hover-right .container-left {
+  filter: blur(1px) brightness(80%);
+  width: 35%;
+}
+.hover-right .container-right {
+  filter: brightness(1);
+  width: 65%;
+} 
+.hover-left .container-left {
+  filter: brightness(1);
+  width: 65%;
+}
+.hover-left .container-right {
+  filter: blur(1px) brightness(80%);
+  width: 35%;
+} 
+
+
+.container h1 {
+  position: absolute;
+  top: 54%;
+  font-size: 5rem;
+  color: var(--seven);
+  white-space: nowrap;
+}
+.container button {
+  position: absolute;
+  top: 70%;
+  background: none;
+  padding: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  border: 4px solid var(--seven);
+  border-radius: 10px;
+  color: var(--seven);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.container button:hover {
+  background-color: var(--five);
+  border: none;
+  color: var(--one);
+  transform: scale(1.1);
+}
+
+@media (width <= 600px) {
+  .container h1 {
+    top: 60%;
+    font-size: 3rem;
+  }
+}

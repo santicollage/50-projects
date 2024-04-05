@@ -51,8 +51,6 @@ h1 {
   transition-property: transform, border-radius;
   transition-duration: 0.8s, 1.3s;
   transition-timing-function: ease-in-out, ease-in-out;
-  /* transition: translateX 0.8s ease-in-out;
-  transition: border-radius 1s ease-in-out; */
 }
 .container .box-small{
   width: 33%;
