@@ -1,0 +1,53 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+  background-color: var(--one);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 4rem;
+  color: var(--eight);
+  text-align: center;
+  line-height: 4.5rem;
+  margin: 40px 20px;
+}
+
+.buttons-container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: auto;
+  gap: 30px;
+  align-content: center;
+  justify-content: center;
+}
+
+.buttons-container .button {
+  height: 100px;
+  background-color: var(--three);
+  color: var(--five);
+  font-size: 2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
