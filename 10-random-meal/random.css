@@ -1,0 +1,121 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+  background-color: var(--one);
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+}
+h1,
+h2 {
+  color: var(--eight);
+  font-weight: bold;
+}
+li {
+  color: var(--seven);
+  font-weight: 200;
+  font-size: 1.4rem;
+}
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+h3 {
+  color: var(--five);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+
+.card-container { 
+  min-width: 300px;
+  width: 600px;
+  padding: 25px;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background-color: var(--two);
+}
+.card-container .article-container {
+  width: 100%;
+  max-height: 300px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.card-container .article-container figure {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.card-container .article-container figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.article-container .detail-container {
+  padding-left: 10px;
+  width: 60%;
+  height: 100%;
+}
+.article-container .detail-container ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  max-height: 80%;
+}
+.article-container .detail-container li {
+  display: block;
+}
+
+button {
+  width: 200px;
+  height: 40px;
+  background-color: var(--four);
+  color: var(--seven);
+  font-family: "Ramabhadra", sans-serif;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+button:hover {
+  background-color: var(--five);
+  color: var(--one);
+  transform: scale(1.1);
+}
+
+
