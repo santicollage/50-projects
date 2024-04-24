@@ -1,0 +1,96 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+  background-color: var(--one);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  font-size: 3rem;
+  color: var(--eight);
+  margin: 20px;
+}
+
+.card-container {
+  position: relative;
+  width: 70%;
+  border-radius: 10px;
+  background-color: var(--five);
+  padding: 20px 30px;
+  margin: 15px 0;
+}
+.card-container.active {
+  background: linear-gradient(143deg, rgba(131,152,153,1) 17%, rgba(165,201,202,1) 56%, rgba(129,193,195,1) 100%);
+}
+.card-container h3 {
+  max-width: 80%;
+  color: var(--one);
+  font-size: 2rem;
+}
+.card-container p {
+  display: none;
+  color: var(--two);
+  font-size: 1.6rem;
+  margin: 20px 0;
+}
+.card-container.active p {
+  display: block;
+}
+.card-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background-color: var(--four);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.card-container button:hover {
+  background-color: var(--six);
+  transform: scale(1.1);
+}
+.card-container .open {
+  display: block;
+  width: 70%;
+  height: 70%;
+  background-image: url(./icons/eye-closed.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-container.active .open {
+  display: none;
+}
+.card-container.active .close {
+  width: 70%;
+  height: 70%;
+  background-image: url(./icons/eye-solid.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
