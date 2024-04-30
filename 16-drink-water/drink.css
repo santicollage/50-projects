@@ -1,0 +1,102 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+  background: var(--one)
+}
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+
+h1 {
+  font-size: 4.2rem;
+  color: var(--eight);
+}
+h2 {
+  font-size: 2rem;
+  color: var(--five);
+}
+h3 {
+  font-size: 1.5rem;
+  color: var(--four);
+  margin: 0 30px;
+  text-align: center;
+}
+
+.main-container {
+  width: 180px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 70px 70px;
+  background: var(--six);
+  border: solid 8px var(--two);
+  overflow: hidden;
+  margin: 20px;
+}
+.main-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--two);
+  line-height: 1.7rem;
+  transition: all 0.5s ease-in-out;
+}
+.main-container div small {
+  font-size: 1rem;
+}
+.main-container .full {
+  background-color: var(--eight);
+  font-size: 3rem;
+}
+
+.partial-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  margin: 20px;
+}
+.partial-container div {
+  width: 60px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 20px 20px;
+  background: var(--six);
+  border: solid 4px var(--two);
+  padding: 10px;
+  line-height: 1.6rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--two);
+  cursor: pointer;
+}
+.partial-container .full {
+  background: var(--eight);
+}
