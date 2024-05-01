@@ -1,0 +1,121 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+  background: var(--one)
+}
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+h2 {
+  font-size: 2rem;
+  color: var(--six);
+  margin: 0 15px;
+  line-height: 2.4rem;
+  align-self: center;
+}
+h3 {
+  font-size: 1.2rem;
+  height: fit-content;
+  color: var(--six);
+  margin-right: 15px;
+  border-radius: 4px;
+  padding: 2px 10px;
+  align-self: center;
+}
+.red {
+  background: rgb(151, 8, 8);
+}
+.orange {
+  background: rgb(200, 130, 0);
+}
+.green {
+  background: rgb(14, 123, 14);
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: var(--eight);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+header #search {
+  width: 240px;
+  height: 40px;
+  margin: 0 40px;
+  padding: 0 10px;
+  color: var(--one);
+  background: var(--six);
+  border: solid 3px var(--four);
+  border-radius: 20px;
+  font-family: "Ramabhadra", sans-serif;
+}
+header #search:focus {
+  outline: none;
+}
+header #search::placeholder {
+  color: var(--four);
+}
+
+main {
+  display: grid;
+  width: 100%;
+  padding: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 25%));
+  justify-content: space-around;
+  gap: 30px;
+}
+main article {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: var(--two);
+}
+main article img {
+  max-height: 80%;
+  min-width: 100%;
+}
+main article div:nth-child(2) {
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+main article div:nth-child(3) {
+  position: absolute;
+  padding: 20px;
+  max-height: 100%;
+  background-color: var(--five);
+  bottom: 0;
+  transform: translateY(100%);
+  transition: all 1s ease-in-out;
+}
+main article:hover div:nth-child(3) {
+  transform: translateY(0);
+}
+main article div:nth-child(3) p {
+  font-size: 1.2rem;
+  color: var(--three);
+}
