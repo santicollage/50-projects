@@ -1,0 +1,88 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+  background: var(--one)
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  transition: all 1s ease-in-out;
+}
+main::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #222831;
+  opacity: 0.6;
+  z-index: -1;
+}
+main .img {
+  width: 60%;
+  height: 70%;
+  background-size: cover;
+  background-position: center;
+  transition: all 1s ease-in-out;
+}
+main .button {
+  width: 60px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--six);
+  margin: 10px;
+  border-radius: 2px;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+main .button:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+main button {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+main .right button {
+  background-image: url(./icons/dot-arrow-right.svg);
+}
+main .left button {
+  background-image: url(./icons/dot-arrow-right.svg);
+  transform: rotate(180deg);
+}

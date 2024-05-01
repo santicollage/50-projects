@@ -82,12 +82,13 @@ main {
   display: grid;
   width: 100%;
   padding: 30px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 25%));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 20%));
   justify-content: space-around;
   gap: 30px;
 }
 main article {
   position: relative;
+  max-width: 260px;
   height: 400px;
   overflow: hidden;
   border-radius: 8px;
