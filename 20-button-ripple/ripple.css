@@ -1,0 +1,65 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: var(--one);
+}
+
+button {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  border: none;
+  background: var(--eight);
+  border-radius: 10px;
+  font-family: "Ramabhadra", sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--one);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+button:hover {
+  font-size: 4.5rem;
+}
+
+button span {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #1b8d67;
+  transform: translate(-50%, -50%) scale(0);
+  animation: wave 0.8s ease-in-out;
+}
+
+@keyframes wave {
+  100% {
+    transform: translate(-50%, -50%) scale(5);
+    opacity: 0;
+  }
+}
