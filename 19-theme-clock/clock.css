@@ -1,0 +1,117 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: var(--six);
+  transition: all 0.6s ease-in-out;
+}
+body.dark {
+  --six: #222831;
+  --one: #E7F6F2;
+  background: var(--six);
+}
+button {
+  padding: 5px 15px;
+  font-family: "Ramabhadra", sans-serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  background: var(--one);
+  color: var(--six);
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+button:hover {
+  transform: scale(1.1);
+}
+
+.analog-clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.analog-clock .hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--one);
+  transform-origin: center left;
+  transition: all 0.6s ease-in-out;
+}
+.analog-clock .hand.second {
+  width: 100px;
+  background: var(--eight);
+}
+.analog-clock .hand.minute {
+  width: 80px;
+}
+.analog-clock .hand.hour {
+  width: 50px;
+}
+.analog-clock .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  background: var(--one);
+  border: solid 4px var(--eight);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.digital-clock h1{
+  font-size: 4rem;
+  color: var(--one);
+  margin: 10px;
+}
+
+.date {
+  transform: translateX(-20px);
+}
+.date h3 {
+  position: relative;
+  font-size: 2rem;
+  color: var(--one);
+}
+.date h3 span {
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translate(100%, -50%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--one);
+  color: var(--six);
+}
