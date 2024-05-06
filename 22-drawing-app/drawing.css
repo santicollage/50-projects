@@ -1,0 +1,118 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--one);
+}
+
+.container-canvas {
+  width: 80%;
+  height: 80%;
+  border-radius: 6px;
+}
+.container-canvas canvas {
+  border: solid 6px var(--four);
+  border-radius: 8px;
+  background-color: var(--five);
+  overflow: hidden;
+}
+
+.container-settings {
+  width: 10%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+  background-color: var(--three);
+  border-radius: 5px;
+}
+.container-settings div {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-settings div:nth-child(2) {
+  justify-content: end;
+}
+.container-settings .settings {
+  width: 40px;
+  height: 40px;
+  background-color: var(--five);
+  border: none;
+  border-radius: 50%;
+  margin: 5px;
+  color: var(--two);
+  font-size: 2rem;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+}
+.container-settings .button {
+  cursor: pointer;
+}
+.container-settings input {
+  padding: 5px;
+}
+.container-settings .button:hover {
+  background-color: var(--six);
+  transform: scale(1.1);
+}
+#plus {
+  background-image: url(./icons/keyframe-plus-in-solid.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#minus {
+  background-image: url(./icons/keyframe-minus-in-solid.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#delete {
+  background-image: url(./icons/xmark-circle-solid.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (width < 500px) {
+  body {
+    flex-direction: column;
+  }
+  .container-settings {
+    flex-direction: row;
+    width: 80%;
+    height: 10%;
+  }
+  .container-settings div{
+    flex-direction: row;
+  }
+
+}
