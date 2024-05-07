@@ -1,0 +1,63 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--one);
+}
+
+section {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+section .triangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: solid 80px transparent;
+}
+section .triangle.horizontal {
+  border-left: solid 80px var(--eight);
+  animation: rotation 3s ease 0s infinite;
+}
+section .triangle.vertical {
+  border-bottom: solid 80px var(--eight);
+  animation: rotation 3s ease 0.75s infinite;
+}
+
+@keyframes rotation {
+  25%,
+  50% {
+    transform: rotate(180deg) scale(1.5);
+  }
+  75%,
+  100% {
+    transform: rotate(360deg);
+  }
+}
