@@ -1,0 +1,124 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background: var(--one);
+}
+header {
+  width: 100%;
+  height: 90px;
+  position: fixed;
+  background-color: var(--three);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+.active {
+  height: 60px;
+  background-color: var(--one);
+}
+header div {
+  width: 30%;
+}
+header div a {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 10px 40px;
+  color: var(--six);
+  text-decoration: none;
+}
+header nav {
+  width: 70%;
+}
+header ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+header ul li a {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--five);
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+}
+header ul li:nth-child(1) a {
+  color: var(--eight);
+}
+header ul li a:hover {
+  color: var(--eight);
+}
+
+.title-container {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 150px 80px;
+  background-image: url(./images/1.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.title-container h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #135963;
+  line-height: 5rem;
+}
+.title-container h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--six);
+  padding: 60px;
+  line-height: 3rem;
+}
+
+.content-container {
+  width: 100%;
+  padding: 10px 80px;
+}
+.content-container h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--six);
+  margin: 20px 0;
+}
+.content-container p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--seven);
+}
+
+@media (width < 600px) {
+  header div a {
+    font-size: 2.5rem;
+    margin: 10px 20px;
+  }
+  header ul li a {
+    font-size: 1.5rem;
+  }
+
+}
