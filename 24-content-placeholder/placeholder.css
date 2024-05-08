@@ -1,0 +1,114 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--one);
+}
+
+.card-container {
+  width: 350px;
+  height: 400px;
+  background-color: var(--six);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-header {
+  width: 100%;
+  height: 50%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-content {
+  width: 100%;
+  height: 50%;
+  padding: 5px 35px 20px 35px;
+}
+.card-content .card-title {
+  width: 100%;
+  font-size: 2.2rem;
+  margin: 10px 0;
+  color: var(--three);
+  line-height: 2.5rem;
+}
+.card-content .card-description {
+  width: 100%;
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: var(--two);
+  line-height: 1.6rem;
+}
+.card-content .card-description span {
+  width: 100%;
+}
+.card-profile {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+.card-profile .profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-profile .content-profile {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  color: var(--one);
+}
+.card-profile .content-profile strong,
+.card-profile .content-profile small {
+  width: 200px;
+}
+
+.loading {
+  background: rgb(165,201,202);
+  background: linear-gradient(90deg, rgba(165,201,202,1) 25%, rgb(126, 188, 189) 50%, rgba(165,201,202,1) 75%);
+  background-size: 150%;
+  animation: gradient 2s linear infinite;
+}
+.loading.text {
+  display: inline-block;
+  height: 15px;
+  border-radius: 10px;
+  margin: 5px 0;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: -175px 0;
+  }
+  100% {
+    background-position: 175px 0;
+  }
+}
