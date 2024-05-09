@@ -1,0 +1,104 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--one);
+}
+
+.buttons-container button {
+  position: absolute;
+  z-index: 100;
+  width: 40px;
+  height: 50px;
+  background-color: var(--six);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.buttons-container button div {
+  width: 70%;
+  height: 70%;
+  background-image: url(./icons/dot-arrow-right.svg);
+  background-position: center;
+  background-size: contain;
+}
+.buttons-container .up-arrow {
+  bottom: 60%;
+  left: 40%;
+  border-radius: 0 6px 6px 0;
+}
+.buttons-container .up-arrow div {
+  transform: rotate(270deg);
+}
+.buttons-container .down-arrow {
+  top: 40%;
+  left: calc(40% - 40px);
+  border-radius: 6px 0 0 6px;
+}
+.buttons-container .down-arrow div {
+  transform: rotate(90deg);
+}
+
+.content-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  transition: all 1s ease-in-out;
+}
+.content-container div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+.content-container h1 {
+  font-size: 3rem;
+}
+.content-container h2 {
+  font-size: 1.5rem;
+}
+
+.img-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  transition: all 1s ease-in-out;
+}
+.img-container div {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
