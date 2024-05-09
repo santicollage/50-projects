@@ -1,0 +1,68 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--one);
+}
+
+button {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background-color: var(--eight);
+  color: var(--two);
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+button:hover {
+  transform: scale(1.1);
+}
+
+.notification-container {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+}
+.message {
+  padding: 20px;
+  font-size: 1.5rem;
+  background-color: var(--six);
+  margin: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+.low-urgency {
+  color: #5cb900;
+}
+.medium-urgency {
+  color: #c0b600;
+}
+.high-urgency {
+  color: #a90606;
+}
