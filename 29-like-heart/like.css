@@ -1,0 +1,121 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  overflow-x: hidden;
+  background: var(--one);
+}
+
+h1 {
+  width: 90%;
+  text-align: center;
+  font-size: 3rem;
+  color: var(--eight);
+}
+
+section {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 0.7fr));
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.card-container {
+  position: relative;
+  height: 350px;
+  background-color: var(--six);
+  border-radius: 10px;
+  -webkit-box-shadow: 14px 11px 22px 2px rgba(0,0,0,1);
+  -moz-box-shadow: 14px 11px 22px 2px rgba(0,0,0,1);
+  box-shadow: 14px 11px 22px 2px rgba(0,0,0,1);
+}
+.card-container h2 {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--one);
+  font-size: 2rem;
+  font-weight: 700;
+}
+.card-container .img-card {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.likes-container {
+  position: absolute;
+  width: 100%;
+  height: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  bottom: 20%;
+  background-color: rgb(232, 245, 241, 0.3);
+}
+.likes-container h3 {
+  font-size: 1.5rem;
+  color: var(--one);
+}
+.likes-container img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.card-container p {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  padding: 8px 20px;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
+}
+
+.card-container .heart {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  background-image: url(./icons/heart-fill.svg);
+  background-size: cover;
+  background-position: center;
+  transform: translate(-50%, -50%) scale(0);
+  animation: heart 0.8s ease-in-out;
+}
+
+@keyframes heart {
+  100% {
+    transform: translate(-50%, -50%) scale(5);
+    opacity: 0;
+  }
+}
