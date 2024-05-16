@@ -1,0 +1,60 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--one);
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--eight);
+  margin: 30px;
+}
+
+.speed-container {
+  padding: 10px;
+  background-color: var(--five);
+  border-radius: 5px;
+}
+.speed-container label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--one);
+  margin-right: 6px;
+}
+.speed-container input {
+  width: 35px;
+  font-size: 1.4rem;
+  padding: 3px;
+  background-color: var(--six);
+  border-radius: 2px;
+  border: none;
+}
+.speed-container input:focus {
+  outline: none;
+}
