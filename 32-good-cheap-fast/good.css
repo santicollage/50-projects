@@ -1,0 +1,99 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--one);
+}
+h1 {
+  font-size: 3rem;
+  width: 80%;
+  text-align: center;
+  line-height: 3.2rem;
+  color: var(--eight);
+  margin: 20px;
+}
+
+.switch-container {
+  display: flex;
+  align-items: center;
+}
+.switch-container .switch {
+  visibility: hidden;
+}
+.switch-container label {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: var(--five);
+  margin: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.switch:checked + label{
+  background-color: var(--eight);
+}
+.switch-container label .circle {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  margin: 1px;
+  border-radius: 50%;
+  background-color: var(--six);
+  animation: unchecked 0.4s linear forwards;
+}
+.switch:checked + label .circle {
+  animation: checked 0.4s linear forwards;
+}
+.switch-container span {
+  font-size: 2rem;
+  color: var(--six);
+}
+
+@keyframes checked {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    transform: translateX(50%) scale(1.1);
+  }
+  100% {
+    transform: translateX(100%) scale(1);
+  }
+}
+@keyframes unchecked {
+  0% {
+    transform: translateX(100%) scale(1);
+  }
+  50% {
+    transform: translateX(50%) scale(1.1);
+  }
+  100% {
+    transform: translateX(0%) scale(1);
+  }
+}
