@@ -1,0 +1,127 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--one);
+}
+
+.count-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: all 0.6s ease-in-out;
+}
+.count-container div {
+  position: relative;
+  width: 100%;
+  height: 66px;
+  overflow: hidden;
+}
+.count-container div span {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(120deg);
+  font-size: 5rem;
+  color: var(--five);
+  transform-origin: bottom center;
+  transition: all 0.5s ease-in-out;
+}
+.count-container div span.in {
+  animation: in 0.6s ease-in-out;
+}
+.count-container div span.out {
+  animation: out 0.6s ease-in-out;
+}
+.count-container h2 {
+  font-size: 4rem;
+  color: var(--six);
+  line-height: 4rem;
+}
+.count-container.invisible {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+
+.finish-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.5s ease-in-out;
+}
+.finish-container h1 {
+  font-size: 5rem;
+  color: var(--eight);
+}
+.finish-container button {
+  padding: 8px;
+  font-size: 2rem;
+  background-color: var(--four);
+  color: var(--six);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.finish-container.show {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes in {
+  0% {
+    transform: translate(-50%, -50%) rotate(120deg);
+  }
+  40% {
+    transform: translate(-50%, -50%) rotate(-20deg);
+  }
+  80% {
+    transform: translate(-50%, -50%) rotate(15deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+}
+
+@keyframes out {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  40% {
+    transform: translate(-50%, -50%) rotate(-15deg);
+  }
+  80% {
+    transform: translate(-50%, -50%) rotate(20deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-120deg);
+  }
+}

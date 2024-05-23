@@ -1,0 +1,137 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background: var(--one);
+}
+
+header {
+  width: 100%;
+  background-color: var(--three);
+}
+header button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 15px 20px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--eight);
+  color: var(--one);
+  font-weight: 700;
+  font-family: "Ramabhadra", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+header button:hover {
+  background-color: var(--six);
+}
+header button .plus {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background-image: url(./icons/agregar.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+main {
+  width: 90%;
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 0.75fr));
+  justify-content: space-around;
+  gap: 20px;
+}
+main .note {
+  height: 300px;
+  background-color: var(--six);
+  overflow: hidden;
+  border-radius: 4px;
+}
+.note .note-header {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 6px;
+  background-color: var(--four);
+}
+.note .note-header .button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.note .note-header .button:hover {
+  background-color: var(--eight);
+}
+.note .note-header .edit div {
+  width: 20px;
+  height: 20px;
+  background-image: url(./icons/editar.svg);
+  background-size: cover;
+  background-position: center;
+}
+.note .note-header .delete div {
+  width: 20px;
+  height: 20px;
+  background-image: url(./icons/basura.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+.note .note-text {
+  width: 100%;
+  height: 85%;
+  padding: 10px 15px;
+  overflow-y: scroll;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+.note textarea {
+  width: 100%;
+  height: 85%;
+  padding: 10px 20px;
+  overflow-y: scroll;
+  border: none;
+  outline: none;
+  font-family: "Ramabhadra", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.invisible {
+  display: none;
+}
