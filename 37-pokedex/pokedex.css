@@ -1,0 +1,83 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background: var(--one);
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--eight);
+}
+
+.card-container {
+  width: 90%;
+  max-width: 850px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-container .card {
+  width: 150px;
+  height: 220px;
+  background-color: var(--six);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 15px;
+}
+.card-container .card div {
+  width: 110px;
+  height: 110px;
+  background-color: rgba(255, 255, 255, .6);
+  border-radius: 50%;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-container .card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--two);
+  background-color: rgba(0, 0, 0, .1);
+  border-radius: 10px;
+  padding: 0 5px;
+  margin: 5px;
+}
+.card-container .card h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--one);
+}
+.card-container .card p {
+  font-size: 1rem;
+  color: var(--one);
+}
