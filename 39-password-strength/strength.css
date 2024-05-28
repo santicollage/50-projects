@@ -1,0 +1,98 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--one);
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(./image/background.jpg);
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+  filter: blur(20px);
+  z-index: -1;
+}
+section {
+  background-color: var(--six);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 35px;
+}
+h1 {
+  font-size: 2.5rem;
+  color: var(--one);
+}
+h2 {
+  font-size: 1.2rem;
+  color: var(--three);
+}
+form {
+  width: 100%;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+form div label {
+  font-size: 1.4rem;
+  color: var(--one);
+  margin: 5px 0;
+}
+form div input {
+  border: solid 1px var(--five);
+  background: none;
+  border-radius: 5px;
+  padding: 15px 10px;
+}
+form button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: var(--eight);
+  color: var(--one);
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-top: 30px;
+  cursor: pointer;
+}
