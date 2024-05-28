@@ -1,0 +1,94 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--one);
+}
+
+section {
+  width: 300px;
+  height: 90%;
+  background-color: var(--six);
+  border-radius: 25px;
+  overflow: hidden;
+  border: solid 8px var(--two);
+}
+
+.main-container {
+  position: relative;
+  width: 100%;
+  height: 88%;
+  overflow: hidden;
+}
+.main-container img {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.5s ease-in-out;
+}
+.main-container .active {
+  opacity: 1;
+}
+
+nav {
+  width: 100%;
+  height: 12%;
+  background-color: var(--six);
+}
+
+nav ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+nav ul li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  color: var(--one);
+  cursor: pointer;
+  font-weight: 800;
+  transition: all 0.3s ease-in-out;
+}
+nav ul li:hover {
+  transform: scale(1.2);
+}
+
+nav ul li div {
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+  background-position: center;
+}
