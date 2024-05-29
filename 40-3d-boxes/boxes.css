@@ -1,0 +1,95 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--one);
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--eight);
+  color: var(--one);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+button:hover {
+  background-color: var(--six);
+}
+
+.boxes-container {
+  width: 400px;
+  height: 400px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 4fr);
+  grid-template-rows: repeat(4, 4fr);
+  transition: all 0.8s linear;
+}
+.boxes-container.puzzle {
+  width: 500px;
+  height: 500px;
+  gap: 30px;
+  box-shadow: none;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-image: url(./image/image.jpg);
+  background-size: 400px;
+  transition: all 0.8s linear;
+}
+.puzzle .box {
+  transform: rotate(360deg);
+}
+.box::before {
+  content: '';
+  background-color: #384a56;
+  position: absolute;
+  bottom: -20px;
+  left: 10px;
+  height: 20px;
+  width: 100%;
+  transform: skewX(45deg);
+}
+.box::after {
+  content: '';
+  background-color: #373f47;
+  position: absolute;
+  top: 10px;
+  right: -20px;
+  height: 100%;
+  width: 20px;
+  transform: skewY(45deg);
+}
