@@ -1,0 +1,103 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--one);
+}
+main {
+  width: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+main header {
+  width: 100%;
+  padding: 20px 25px;
+  background-color: var(--five);
+}
+header h1 {
+  font-size: 2.5rem;
+  color: var(--one);
+  line-height: 2.8rem;
+}
+header h3 {
+  font-size: 1.5rem;
+  color: var(--three);
+}
+header input {
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+}
+header input:focus {
+  outline: none;
+}
+
+ul {
+  width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
+  list-style-type: none;
+  background-color: var(--six);
+}
+ul::-webkit-scrollbar {
+  margin-right: 2px;
+  width: 10px;
+  background-color: var(--six);
+}
+ul::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--three);
+}
+ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px 25px;
+}
+ul li img {
+  width: 50px;
+  height: 50px;
+  background-color: var(--three);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-right: 25px;
+}
+ul li h4 {
+  font-size: 1.3rem;
+  color: var(--one);
+}
+ul li p {
+  color: var(--two);
+}
+
+.invisible {
+  display: none;
+}
