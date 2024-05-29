@@ -1,0 +1,93 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--one);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--three);
+  box-shadow: 0 0 8px var(--four), 0 0 30px var(--three);
+  border-radius: 10px;
+  padding: 30px; 
+}
+section h1 {
+  font-size: 3rem;
+  color: var(--eight);
+}
+section h3 {
+  font-size: 1.5rem;
+  color: var(--five);
+  font-weight: 200;
+  margin: 10px 0;
+}
+section div {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+section div input {
+  width: 70px;
+  font-size: 7rem;
+  padding: 10px 5px;
+  text-align: center;
+  margin: 10px;
+  border-radius: 5px;
+  background: none;
+  color: var(--seven);
+  border: solid 2px var(--two);
+}
+section div input::placeholder {
+  color: var(--five);
+}
+section div input:valid {
+  border: solid 3px var(--eight);
+  box-shadow: 5px 5px 5px var(--one);
+}
+section div input:focus {
+  outline: none;
+  border:solid 3px var(--one);
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  }
+section p {
+  max-width: 300px;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  background-color: var(--four);
+  color: var(--one);
+}
