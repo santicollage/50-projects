@@ -1,0 +1,94 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--one);
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: var(--five);
+  text-align: center;
+}
+section h2 {
+  font-size: 1.8rem;
+  color: var(--one);
+  line-height: 2.4rem;
+  margin-bottom: 20px;
+}
+section h3 {
+  font-size: 1.5rem;
+  color: var(--one);
+  line-height: 2.5rem;
+  margin-bottom: 20px;
+}
+section p {
+  font-size: 1.2rem;
+  color: var(--one);
+  line-height: 1.4rem;
+}
+section .rating-container {
+  display: flex;
+}
+section .rating-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 20px 30px;
+  border-radius: 5px;
+  background-color: var(--four);
+  font-size: 1.5rem;
+  color: var(--six);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+section .rating-container div:hover,
+section .rating-container div.active {
+  background-size: var(--three);
+  transform: scale(1.02);
+  box-shadow: 2px 2px 10px var(--three);
+}
+section .rating-container div img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+section button {
+  font-size: 1.5rem;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--eight);
+  color: var(--one);
+  font-weight: 600;
+  margin-top: 20px;
+  cursor: pointer;
+}
