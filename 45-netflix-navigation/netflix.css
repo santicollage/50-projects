@@ -1,0 +1,118 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--five);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform .4s ease-in-out;
+}
+.nav.show {
+  transform: translateX(0);
+}
+.nav-one {
+  width: 60%;
+  background-color: var(--eight);
+  transition-delay: 0;
+}
+.nav-two {
+  width: 90%;
+  background-color: var(--three);
+  transition-delay: 0.2s;
+}
+.nav-three {
+  width: 90%;
+  position: relative;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--six);
+  transition-delay: 0.4s;
+}
+.nav .btn-close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  background: none;
+  background-image: url(./icons/cruz.svg);
+  background-size: cover;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+.nav .img-nav {
+  width: 130px;
+  height: 50px;
+  align-self: center;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 20px;
+}
+.nav ul {
+  list-style: none;
+}
+.nav ul li {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--three);
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-nav {
+  position: absolute;
+  top: 40px;
+  left: 5%;
+  width: 40px;
+  height: 40px;
+  background: none;
+  background-image: url(./icons/menu-hamburguesa.svg);
+  background-size: cover;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+.img-main {
+  width: 300px;
+  height: 110px;
+  object-fit: cover;
+  object-position: center;
+}
+h1 {
+  font-size: 2rem;
+  color: var(--three);
+}
