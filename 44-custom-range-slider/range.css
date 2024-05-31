@@ -1,0 +1,77 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--one);
+}
+h1 {
+  font-size: 4rem;
+  color: var(--eight);
+  margin-bottom: 70px;
+}
+div {
+  position: relative;
+}
+div label {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  font-size: 1.4rem;
+  font-weight: 600;
+  top: -20px;
+  transform: translate(-25px, -50px);
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--six);
+  color: var(--one);
+  box-shadow: 0 0 10px var(--four), 0 0 5px var(--four);
+}
+div input {
+  width: 300px;
+  height: 20px;
+  -webkit-appearance: none;
+  background: transparent;
+}
+div input::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 12px;
+  background: var(--five);
+  border-radius: 6px;
+}
+div input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  background: var(--eight);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -10px;
+}
