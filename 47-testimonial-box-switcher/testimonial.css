@@ -1,0 +1,103 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--one);
+}
+
+section {
+  border-radius: 10px;
+  background-color: var(--six);
+  max-width: 600px; 
+  display: flex;
+  padding: 30px 5%;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+
+section .quotes{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url(./icons/cita.png);
+  background-size: cover;
+  top: 60px;
+}
+section .quotes.left {
+  left: 20px;
+}
+section .quotes.rigth {
+  right: 20px;
+  transform: rotate(180deg);
+}
+section .loading-bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--eight);
+  margin-bottom: 20px;
+  animation: grow 10s linear infinite;
+  transform-origin: left;
+}
+section p {
+  font-size: 1.5rem;
+  color: var(--one);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+}
+.profile-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--three);
+  margin-right: 10px;
+}
+.profile-container h3 {
+  font-size: 1.5rem;
+  color: var(--one);
+}
+.profile-container h4 {
+  color: var(--two);
+}
+
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@media (width < 600px) {
+  section {
+    padding: 30px 40px;
+  }
+}
