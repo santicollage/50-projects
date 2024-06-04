@@ -1,0 +1,50 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  overflow-x: hidden;
+  background: var(--one);
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--eight);
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+}
+section img {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 5px;
+}
