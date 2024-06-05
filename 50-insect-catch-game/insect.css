@@ -1,0 +1,141 @@
+:root {
+  --one: #222831;
+  --two: #31363F;
+  --three: #395B64;
+  --four: #76ABAE;
+  --five: #A5C9CA;
+  --six: #E7F6F2;
+  --seven: #EEEEEE;
+  --eight: #7fffd4; 
+}
+* {
+  margin: 0;
+  padding: 0;
+  margin-block: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Ramabhadra", sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--one);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+}
+
+
+.start-section h1 {
+  font-size: 6rem;
+  color: var(--eight);
+  text-align: center;
+}
+.start-section button {
+  padding: 20px 30px;
+  font-size: 3rem;
+  font-weight: 600;
+  background-color: var(--six);
+  color: var(--two);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.start-section button:hover {
+  background-color: var(--eight);
+}
+
+.choose-section {
+  height: 0;
+}
+h1 {
+  font-size: 4rem;
+  color: var(--six);
+  text-align: center;
+}
+.choose-section ul {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+}
+.choose-section button {
+  width: 150px;
+  height: 150px;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid 2px var(--eight);
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+}
+.choose-section button:hover {
+  background-color: var(--eight);
+}
+.choose-section button h4 {
+  font-size: 1.8rem;
+  color: var(--seven);
+}
+.choose-section button:hover h4 {
+  color: var(--one);
+}
+.choose-section button img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  object-position: center;
+  margin-top: 10px;
+}
+
+.game-section {
+  height: 0;
+}
+.game-section header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.game-section header h3 {
+  font-size: 2.5rem;
+  color: var(--six);
+}
+.game-section .game-container {
+  width: 100%;
+  height: 90%;
+  position: relative;
+}
+.game-section .game-container img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  object-position: center;
+  cursor: pointer;
+}
