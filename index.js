@@ -23,7 +23,7 @@ const projects = [
   },
   {
     name: 'Scroll Animation',
-    link: './6-scroll/scroll.html'
+    link: './6-scroll-animation/scroll.html'
   },
   {
     name: 'Split Landing',
@@ -47,7 +47,7 @@ const projects = [
   },
   {
     name: 'Frequently Asked Questions',
-    link: './12-frequently-asked-questions/questions.html'
+    link: './12-frequently-asked-questions/question.html'
   },
   {
     name: 'Random Choice Picker',
